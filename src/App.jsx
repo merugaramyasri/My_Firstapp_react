@@ -1,20 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from "./components/header";      // default import
+import { Sidebar } from "./components/Sidebar"; // named import
+import { Content } from "./components/Content"; // named import
+import Footer from "./components/Footer";      // default import
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-    <div style={{color:"red"}}>
-      My first application
-      react is used to build UI
-    </div>
-      
+      <Header />
+
+      <div style={{ display: "flex", minHeight: "200px" }}>
+        <Sidebar />
+        <Content />
+      </div>
+
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
